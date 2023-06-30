@@ -1,3 +1,5 @@
+import ra.IllegalTriangleException;
+
 import java.util.Scanner;
 
 public class Main {
@@ -57,12 +59,12 @@ public class Main {
         }
     }
     // có 1 phương thức cho phép người dùng nhập vào 1 số > 0
-    public static int getInt(){
+    public static int getInt() {
         Scanner sc= new Scanner(System.in);
         System.out.println("Nhap vao 1 so");
         int so = sc.nextInt();
         if(so<=0){
-            throw new IllegalArgumentException("Khong the nhap 1 so < = 0");
+            throw new IllegalTriangleException("Khong the nhap 1 so < = 0");
         }else {
             return so;
         }
